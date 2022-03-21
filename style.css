@@ -55,6 +55,7 @@ header{
 }
 span, .icon {
 	vertical-align: middle;
+	transition: .3s;
 }
 .icon:hover{
 	opacity: 0.3;
@@ -160,6 +161,13 @@ img{
 	width: 32%;
 }
 .gift-card section{padding-right: 12%;
+}
+.arrow-btn{
+	opacity: 0.5;
+}
+.arrow-btn:hover{
+	opacity: 0.9;
+	cursor: pointer;
 }
 /*===============================================================*/
 /*Footer Style*/
