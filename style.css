@@ -1,0 +1,233 @@
+*{
+	box-sizing: border-box;
+}
+:root {
+    --primary-color: #b90415;
+    --primary-color-hover: #d3071b;
+    --secondary-color: #103063;
+    --secondary-color-hover: #143f85;
+    --light-color: #f4f4f4;
+	--spotify-green:rgba(30, 215, 96,0.9);
+}
+
+html,body{
+	font-family: 'Nunito',sans-serif;
+	width: 100%;
+	margin: 0;
+	height: 100%;
+	line-height: 1.9em;
+	color: var(--light-color);
+	scroll-behavior: smooth;
+}
+/*For all Links*/
+a{
+	text-decoration: none;
+	color: #ffffffaf;
+}
+/*For all unorder-List*/
+ul{
+	list-style-type: none;
+}
+
+/*=====================Top navigation-bar style=====================*/
+body div{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #252529;
+	overflow: hidden;
+	margin: 0;
+	box-shadow: 0 0 10px 0 #00000055;
+	z-index: 3;
+}
+.icon2{
+	visibility: hidden;
+	position: absolute;
+	right: 0;
+}
+span, .icon {
+	vertical-align: middle;
+}
+.icon:hover{
+	opacity: 0.3;
+}
+#top-nav ul{
+	margin: 0;
+}
+#top-nav ul li{
+	float: left;
+}
+#top-nav ul li a{
+	display: inline-block;
+	font-weight: 650;
+	padding: 7px 13px;
+	transition: 0.5s;
+}
+#top-nav ul li a:hover:not(.icon){
+	background-color: var(--spotify-green);
+	color: #000;
+}
+/*=======================section style=======================*/
+.section{
+	background-image: linear-gradient(230deg,rgba(0, 0, 0, 0.6),rgba(0,0,0, 0.8)),url('img1.jpg');/* linear-gradient(230deg,rgba(0, 0, 0, 0.6),rgba(0,0,0, 0.8)),url('testimg.jpg');*/
+	height: 100%;
+	text-align: center;
+	font-size:x-large;
+	padding: 180px 0;
+}
+.section p{
+	margin: 50px auto;
+	width: 74%;
+}
+/*================================================================*/
+.product-descr{
+	background-color: #252529;
+	text-align: center;
+	font-size: larger;
+	display: flex;
+	flex-direction: column;
+}
+.product-descr p{
+	margin: 50px auto 15px auto;
+	width: 74%;
+}
+.btn{
+	display: block;
+	margin: 15px auto 15px auto;
+	width: fit-content;
+	padding: 15px 10px;
+	background-color: rgba(30, 215, 96,0.3);;
+	border: 1px solid #000;
+	border-radius: 5px;
+	font-size: large;
+	transition: 0.4s;
+}
+.btn:hover{
+	background-color: var(--spotify-green);
+	border: 1px solid black;
+	font-weight: bold;
+	color: #000;
+}
+img{
+	width: 53%;
+	margin: 28px auto;
+}
+/*=============================================================*/
+/*section 3 style*/
+.section3{
+	color: #000;
+	text-align: center;
+	font-size: large;
+}
+
+.section3 p{
+	width: 85%;
+	margin: 35px auto;
+}
+.section3 .btn{
+	background-color: #fff;
+	border: 1px solid black;
+}
+.section3 .btn:hover{
+	background-color: #252529dc;
+	color: #fff;
+}
+/*==============================================================*/
+.s4{
+	height: 60%;
+	padding: 45px;
+}
+.s4 p{
+	width: 92%;
+}
+/*==============================================================*/
+.gift-card{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 42px;
+	color: black;
+}
+.gift-card img{
+	width: 32%;
+}
+.gift-card section{padding-right: 12%;
+}
+/*===============================================================*/
+/*Footer Style*/
+footer{
+	background-color: #252529;
+	padding: 25px 35px;
+}
+.bottom-nav{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+}
+.bottom-nav ul li:first-child{
+	font-size: larger;
+	margin-bottom: 1em;padding-bottom: 10px;
+	border-bottom: 1px solid #ffffff44;
+}
+.bottom-nav a{
+	transition: 0.5s;
+}
+.bottom-nav ul li a:hover{
+	color: var(--spotify-green);
+}
+.legals{
+	padding: 25px 35px 10px 35px;
+}
+.legals .rights{
+	float: right;
+}
+/*========================Media Quaries==========================*/
+
+@media screen and (max-width:1110px) {
+	.gift-card {
+		flex-direction: column;
+	}
+	.gift-card img{
+		width: 40%;
+	}
+}
+
+@media screen and (max-width:778px) {
+	.bottom-nav{
+		grid-template-columns: auto auto;
+	}
+	.bottom-nav ul{
+		padding-right: 45px;
+	}
+}
+
+@media screen and (max-width:600px) {
+	.legals .rights{
+		float: none;
+	}
+	.legals{
+		display: flex;
+		text-align: center;
+		flex-direction: column;
+	}
+	#top-nav ul .nav-link{
+		display: none;
+	}
+	.icon2{
+		visibility: visible;
+	}
+}
+
+@media screen and (max-width:470px) {
+	.bottom-nav{
+		grid-template-columns: auto;
+		text-align: center;
+	}
+}

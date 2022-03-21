@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+
+.section{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: auto;
+    line-height: 1.2em;
+}
+.music{
+    position: relative;
+    margin-left: 8%;
+    padding: 15px 25px;
+    width: 55%;
+    background-color: #ffffff21;
+    border-radius: 6px;
+}
+.creator-bio{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: -28px;
+    left: 108%;
+    width: 100%;
+    font-size: small;
+    background-color: #252529f3;
+    border-radius: 6px;
+    padding: 0 17px;
+    opacity: 0;
+    box-shadow: 0 0 10px 0 #ffffff1d;
+    transition: 0.4s;
+    z-index: 5;
+}
+
+.creator-bio::before{
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -13%;
+    border-width: 16px;
+    border-style: solid;
+    border-color: transparent transparent transparent #252529f3;
+    transform: rotate(180deg);
+}
+.music iframe{
+    margin-bottom: 15px;
+    position: relative;
+    left: 0px;opacity: 0.62;
+    transition: 0.4s;
+}
+.music iframe:hover{
+    opacity: 0.92;
+    transform: translateX(20px);
+}
+.music h2{
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    top: 5px;
+    transition: 0.5s;
+}
+
+.music h2:hover{
+    top: 0px;
+    border-bottom: 1px solid #ffffff29;
+}
+.music h2:hover .creator-bio{
+    opacity: 1;
+}
+
+
+@media screen and (max-width:600px) {
+    .music{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        margin: 0 auto;
+    }
+    .creator-bio{
+        display: none;
+    }
+}
